@@ -82,7 +82,7 @@ router.get('/',(req,res)=>{
     });
 });
 router.get('/:id',(req,res)=>{
-    let sql='select movies.id as id, movies.name as name ,movies.picture as picture,genre.name as genre ,director.name as director from movies join director on movies.director=director.id join genre on movies.genre=genre.id where movie.genre=?';
+    let sql='select movies.id as id, movies.name as name ,movies.picture as picture,genre.name as genre ,director.name as director from movies join director on movies.director=director.id join genre on movies.genre=genre.id where movies.genre=?';
     let {id}=req.params;
     let params=[id];
     db.query(sql,params,(err,result)=>{
