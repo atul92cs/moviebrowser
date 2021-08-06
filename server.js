@@ -3,7 +3,7 @@ let genre=require('./controllers/genre');
 let director=require('./controllers/director');
 let express=require('express');
 let app=express();
-let port=8080||process.env.port;
+let port=8080||process.env.PORT;
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 app.use('/movie',movies);
