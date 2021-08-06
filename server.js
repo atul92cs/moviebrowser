@@ -6,9 +6,9 @@ let app=express();
 let port=process.env.PORT||8080;
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
-app.use('/movie',movies);
+app.use('/',movies);
 app.use('/genre',genre);
 app.use('/director',director);
 app.listen(port,()=>{
-    console.log('server started');
+    console.log('server started on'+port);
 });

@@ -1,10 +1,10 @@
 let mysql=require('mysql');
 let db=mysql.createConnection({
-    host:'bqateyin3z4fcjjgix8x-mysql.services.clever-cloud.com',
-    user:'u78zhrz26qzbx3qh',
+    host:'localhost',
+    user:'root',
     port:3306,
     database:'bqateyin3z4fcjjgix8x',
-    password:'0qVcqFrNpQpClC0rhA69',
+    password:'seed',
     multipleStatements:true
 });
 db.connect(err=>{
