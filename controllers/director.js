@@ -21,7 +21,7 @@ router.post('/add',(req,res)=>{
         }
     });
 });
-router.get('/',(req,res)=>{
+router.get('/get',(req,res)=>{
     let sql='select * from director';
     db.query(sql,(err,result)=>{
         if(!err)
